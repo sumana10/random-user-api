@@ -10,28 +10,25 @@ export default function MyCard({details}) {
       <img height="150" width="150" src={details.picture?.large} alt="user-image" className="rounded-circle img-thumbnail border-danger" />
       <CardTitle className="text-primary">
         <h1>
-          <span className="pe-2">{details.name?.title }
-          </span>
-          <span className="pe-2">{details.name?.first}
-          </span>
-          <span className="pe-2">{details.name?.last}
-          </span>
+          <span className="pe-2">{details.name?.title}</span>
+          <span className="pe-2">{details.name?.first}</span>
+          <span className="pe-2">{details.name?.last}</span>
         </h1>
       </CardTitle>
       <CardText>
-        <FaMapMarkedAlt/>
-        <p>
-        {details.location?.city}
-        </p>
-        <p>
-        {details.phone}
-        </p>
-        <p className="h6">
-        {details.email}
-        </p>
-        
+          <p>
+          <FaMapMarkedAlt/>
+          {details.location?.city}
+          </p>
+          <p>
+          <FaPhone/>
+          {details.phone}
+          </p>
+          <p className="h6">
+          <FaEnvelope/>
+          {details.email}
+          </p>
       </CardText>
-
     </CardBody>
     </Card>
   )
