@@ -7,7 +7,7 @@ import './App.css';
 import MyCard from "./Card";
 
 
-function App() {
+const App = () =>{
   
   const [details, setDetails] = useState({});
 
@@ -15,6 +15,8 @@ function App() {
 
    // const response = await Axios.get('https://randomuser.me/api/');
    //console.log("RESPONSE:",response);
+
+   console.log("why it's not being called")
 
     const {data} = await Axios.get('https://randomuser.me/api/')
     console.log(data);
@@ -34,7 +36,7 @@ function App() {
     <Container fluid className="p-4 bg-primary App">
       <Row>
         <Col md={4} className="offset-md-4 mt-4">
-        <MyCard details = {details}/>
+        <MyCard details = {details} fetchDetails={fetchDetails}/>
         </Col>
       </Row>
    </Container>

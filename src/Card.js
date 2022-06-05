@@ -3,11 +3,12 @@ import {Card, CardBody, CardTitle, CardText} from 'reactstrap'
 import { FaEnvelope, FaMapMarkedAlt, FaPhone} from "react-icons/fa"
 
 
-export default function MyCard({details}) {
+export default function MyCard({details, fetchDetails}) {
   return (
+    <>
     <Card>
     <CardBody className="text-center">
-      <img height="150" width="150" src={details.picture?.large} alt="user-image" className="rounded-circle img-thumbnail border-danger" />
+      <img height="150" width="150" src={details.picture?.large} alt="user-image" className="rounded-circle img-thumbnail border-info" />
       <CardTitle className="text-primary">
         <h1>
           <span className="pe-2">{details.name?.title}</span>
@@ -28,8 +29,11 @@ export default function MyCard({details}) {
           <FaEnvelope/>
           {details.email}
           </p>
+          
       </CardText>
     </CardBody>
     </Card>
+    <button className="myButton" onClick={()=>{fetchDetails()}}> next </button>
+   </>
   )
 }
