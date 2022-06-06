@@ -10,11 +10,11 @@ export default function MyCard({details, fetchDetails}) {
     <CardBody className="text-center">
       <img height="150" width="150" src={details.picture?.large} alt="user-image" className="rounded-circle img-thumbnail border-info" />
       <CardTitle className="text-primary">
-        <h1>
+        <h3>
           <span className="pe-2">{details.name?.title}</span>
           <span className="pe-2">{details.name?.first}</span>
           <span className="pe-2">{details.name?.last}</span>
-        </h1>
+        </h3>
       </CardTitle>
       <CardText>
           <p>
@@ -33,7 +33,7 @@ export default function MyCard({details, fetchDetails}) {
       </CardText>
     </CardBody>
     </Card>
-    <button className="myButton" onClick={()=>{fetchDetails()}}> next </button>
+    <button className="myButton" onClick={()=>{fetchDetails()}}> Get Random User </button>
    </>
   )
 }

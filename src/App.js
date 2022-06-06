@@ -21,6 +21,7 @@ const App = () =>{
     const {data} = await Axios.get('https://randomuser.me/api/')
     console.log(data);
     const details = data.results[0];
+    // console.log(data?.info?.seed);
    
     //update state
     setDetails(details);
